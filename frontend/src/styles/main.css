@@ -1,0 +1,76 @@
+/* 1. Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Base styles */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.5;
+  color: #1f2937;
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+
+/* 3. Page layout */
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+/* Header */
+header {
+  background-color: #111827;
+  color: #ffffff;
+  padding: 1rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+/* Main layout */
+main {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Sidebar */
+aside {
+  background-color: #e5e7eb;
+  padding: 1rem;
+}
+
+/* Content */
+section {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+article {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+/* Footer */
+footer {
+  background-color: #111827;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+}
