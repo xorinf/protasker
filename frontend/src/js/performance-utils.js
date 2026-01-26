@@ -389,17 +389,15 @@ function runPerformanceDemo() {
 // EXPORTS
 // ============================================================================
 
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = {
-        debounce,
-        throttle,
-        memoize,
-        memoizeWith,
-        rafThrottle,
-        rafDebounce,
-        createBatcher,
-        once,
-        retryWithBackoff,
-        runPerformanceDemo,
-    };
-}
+export {
+    debounce,
+    throttle,
+    memoize,
+    memoizeWith,
+    rafThrottle,
+    rafDebounce,
+    createBatcher,
+    once,
+    retryWithBackoff,
+    runPerformanceDemo,
+};

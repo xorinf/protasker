@@ -1,27 +1,32 @@
 {
   "name": "protester",
   "version": "1.0.0",
-  "description": "",
+  "description": "A full-stack MERN project management platform",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint frontend/src/**/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xorinf/protester.git"
+    "url": "git+https://github.com/xorinf/protasker.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/xorinf/protester/issues"
+    "url": "https://github.com/xorinf/protasker/issues"
   },
-  "homepage": "https://github.com/xorinf/protester#readme",
+  "homepage": "https://github.com/xorinf/protasker#readme",
   "devDependencies": {
     "@eslint/js": "^9.39.2",
     "eslint": "^9.39.2",
     "globals": "^17.1.0",
-    "prettier": "^3.8.1"
+    "prettier": "^3.8.1",
+    "vite": "^5.4.14"
   }
 }

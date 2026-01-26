@@ -324,12 +324,4 @@ function runPatternsDemos() {
 }
 
 // Export for use in other modules
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = {
-    TaskCounter,
-    createTask,
-    Project,
-    createEnhancedTask,
-    runPatternsDemos,
-  };
-}
+export { TaskCounter, createTask, Project, createEnhancedTask, runPatternsDemos };

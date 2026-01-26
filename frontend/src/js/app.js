@@ -13,8 +13,8 @@
  * patterns will make React's architecture make perfect sense.
  */
 
-// Import utilities (in browser, these would be loaded via script tags)
-// For now, we'll reference them as globals
+// Import utilities
+import { debounce } from './performance-utils.js';
 
 // ============================================================================
 // APP MODULE — Main Application Logic
@@ -267,14 +267,12 @@ const TaskManager = (function () {
 // INITIALIZATION
 // ============================================================================
 
-// Wait for DOM to be ready
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-        TaskManager.init();
-    });
-} else {
-    TaskManager.init();
-}
+// Vite will handle DOMContentLoaded automatically
+// Initialize when module loads
+TaskManager.init();
 
 // For debugging in console
 window.TaskManager = TaskManager;
+
+// Export for potential testing
+export { TaskManager };
