@@ -4,3 +4,8 @@ node_modules
 #ignore sensitive data and system dir cache
 .env
 .DS_Store
+
+# Vite build artifacts
+dist
+.vite
+*.local

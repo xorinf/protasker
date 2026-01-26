@@ -337,24 +337,22 @@ function runDomUtilsDemo() {
 }
 
 // Export for use in other modules
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = {
-        createElement,
-        $,
-        $$,
-        delegate,
-        on,
-        classUtils,
-        data,
-        getAllData,
-        insert,
-        remove,
-        empty,
-        setAttributes,
-        getAttributes,
-        show,
-        hide,
-        toggle,
-        runDomUtilsDemo,
-    };
-}
+export {
+    createElement,
+    $,
+    $$,
+    delegate,
+    on,
+    classUtils,
+    data,
+    getAllData,
+    insert,
+    remove,
+    empty,
+    setAttributes,
+    getAttributes,
+    show,
+    hide,
+    toggle,
+    runDomUtilsDemo,
+};
