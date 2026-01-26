@@ -10,38 +10,60 @@
 
   <header>
     <h1>ProTasker</h1>
-    <nav>
-      <ul>
-        <li><a href="#dashboard">Dashboard</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#tasks">Tasks</a></li>
-      </ul>
-    </nav>
+    <p class="subtitle">Advanced JavaScript Patterns Demo</p>
   </header>
 
-  <main>
+  <main class="container">
+    
+    <!-- Task Input Section -->
+    <section class="task-input-section">
+      <h2>Add New Task</h2>
+      <form id="task-form">
+        <div class="input-group">
+          <input 
+            type="text" 
+            id="task-input" 
+            placeholder="What needs to be done?"
+            autocomplete="off"
+            required
+          >
+          <button type="submit" class="btn-primary">Add Task</button>
+        </div>
+      </form>
 
-    <!-- Dashboard Section -->
-    <section id="dashboard">
-      <h2>Dashboard Overview</h2>
-
-      <article>
-        <h3>Example Task Card</h3>
-        <p>This is a placeholder task to show how article elements work.</p>
-      </article>
-
+      <div class="search-box">
+        <input 
+          type="text" 
+          id="search-input" 
+          placeholder="Search tasks... (debounced)"
+          autocomplete="off"
+        >
+      </div>
     </section>
 
-    <aside>
-      <h2>Sidebar</h2>
-      <p>Useful links or filters go here.</p>
-    </aside>
+    <!-- Statistics Section -->
+    <section class="stats-section">
+      <h3>Statistics</h3>
+      <div id="stats" class="stats-grid"></div>
+    </section>
+
+    <!-- Task List Section -->
+    <section class="task-list-section">
+      <h3>Your Tasks</h3>
+      <ul id="task-list" class="task-list"></ul>
+    </section>
 
   </main>
 
   <footer>
-    <p>&copy; 2026 ProTasker — All rights reserved.</p>
+    <p>&copy; 2026 ProTasker — Phase 4: Advanced JavaScript Patterns</p>
   </footer>
+
+  <!-- Phase 4 Scripts -->
+  <script src="../src/js/performance-utils.js"></script>
+  <script src="../src/js/dom-utils.js"></script>
+  <script src="../src/js/core-patterns.js"></script>
+  <script src="../src/js/app.js"></script>
 
 </body>
 </html>
