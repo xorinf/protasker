@@ -10,6 +10,7 @@ import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 
 // Route Imports
 import testRoutes from './routes/testRoutes.js';
+import userRoutes from './routes/userRoutes.js';
 
 // Load environment variables
 dotenv.config();
@@ -30,6 +31,7 @@ if (process.env.NODE_ENV === 'development') {
 
 // Routes
 app.use('/api', testRoutes);
+app.use('/api/users', userRoutes);
 
 // Root Endpoint
 app.get('/', (req, res) => {
