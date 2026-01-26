@@ -1,5 +1,5 @@
 /**
- * MAIN.JS — Application Entry Point for Vite
+ * main.js — Application Entry Point for Vite
  * 
  * This file serves as the entry point for the Vite build system.
  * It imports and initializes the Phase 4 task manager application.
