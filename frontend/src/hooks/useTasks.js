@@ -15,8 +15,30 @@ import { createTask, filterTasks as filterTasksUtil } from '../utils/taskHelpers
  * @returns {Object} Task state and actions
  */
 function useTasks() {
-    // Persisted state
-    const [tasks, setTasks] = useLocalStorage('protasker_tasks', []);
+    // Persisted state (new key to avoid schema conflict)
+    const [tasks, setTasks] = useLocalStorage('protasker_react_tasks', []);
+
+    // Data migration: One-time check for legacy data
+    useState(() => {
+        try {
+            const legacy = localStorage.getItem('protasker_tasks');
+            const current = localStorage.getItem('protasker_react_tasks');
+
+            // If we have legacy data but no new data, migrate it
+            if (legacy && !current) {
+                const parsed = JSON.parse(legacy);
+                // Legacy format was { tasks: [], nextId: number }
+                if (parsed.tasks && Array.isArray(parsed.tasks)) {
+                    console.log('Migrating legacy tasks to React app', parsed.tasks);
+                    setTasks(parsed.tasks);
+                    // Optional: clear legacy
+                    // localStorage.removeItem('protasker_tasks'); 
+                }
+            }
+        } catch (e) {
+            console.error('Migration failed', e);
+        }
+    });
 
     // Local filter state
     const [searchTerm, setSearchTerm] = useState('');
