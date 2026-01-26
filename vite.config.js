@@ -1,21 +1,16 @@
 import { defineConfig } from 'vite';
 import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    // Set root to frontend directory
-    root: 'frontend',
-
     // Build configuration
     build: {
-        outDir: '../dist',
+        outDir: 'dist',
         emptyOutDir: true,
         sourcemap: true,
-        rollupOptions: {
-            input: {
-                main: path.resolve(__dirname, 'frontend/index.html'),
-            },
-        },
     },
 
     // Development server configuration
