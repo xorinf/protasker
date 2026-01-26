@@ -14,8 +14,8 @@ import testRoutes from './routes/testRoutes.js';
 // Load environment variables
 dotenv.config();
 
-// Connect to Database (Placeholder for Phase 9)
-// connectDB(); 
+// Connect to Database
+connectDB();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
