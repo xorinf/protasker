@@ -4,54 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ProTasker — Modern Task Management</title>
+  <title>ProTasker — React Task Management</title>
 </head>
 
 <body>
-
-  <header>
-    <h1>ProTasker</h1>
-    <p class="subtitle">Phase 5: Modern Build System with Vite</p>
-  </header>
-
-  <main class="container">
-
-    <!-- Task Input Section -->
-    <section class="task-input-section">
-      <h2>Add New Task</h2>
-      <form id="task-form">
-        <div class="input-group">
-          <input type="text" id="task-input" placeholder="What needs to be done?" autocomplete="off" required>
-          <button type="submit" class="btn-primary">Add Task</button>
-        </div>
-      </form>
-
-      <div class="search-box">
-        <input type="text" id="search-input" placeholder="Search tasks... (debounced)" autocomplete="off">
-      </div>
-    </section>
-
-    <!-- Statistics Section -->
-    <section class="stats-section">
-      <h3>Statistics</h3>
-      <div id="stats" class="stats-grid"></div>
-    </section>
-
-    <!-- Task List Section -->
-    <section class="task-list-section">
-      <h3>Your Tasks</h3>
-      <ul id="task-list" class="task-list"></ul>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>&copy; 2026 ProTasker — Powered by Vite</p>
-  </footer>
+  <!-- React will render the entire app here -->
+  <div id="root"></div>
 
   <!-- Vite Module Entry Point -->
-  <script type="module" src="/frontend/src/main.js"></script>
-
+  <script type="module" src="/frontend/src/main.jsx"></script>
 </body>
 
 </html>
