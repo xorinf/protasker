@@ -1,6 +1,7 @@
 /* ============================================================================
    PROTASKER — Phase 4: Advanced JavaScript Patterns Demo
    ============================================================================ */
+@import './layout.css';
 
 /* 1. CSS Reset */
 *,
@@ -12,6 +13,7 @@
 }
 
 /* 2. CSS Variables */
+
 :root {
   /* Colors */
   --clr-primary: #3b82f6;
